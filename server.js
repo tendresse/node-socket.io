@@ -59,7 +59,7 @@ io.on('connection', (socket) => {
       callback(responseData);
   });
   
-  socket.on('tendresse viewed', function(id, callback) {
+  socket.on('tendresse seen', function(id, callback) {
       var responseData = true;
       callback(responseData);
   });
