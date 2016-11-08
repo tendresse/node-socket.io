@@ -28,7 +28,7 @@ io.on('connection', (socket) => {
   });
 
   socket.on('get friends', function(callback) {
-      var responseData = [{"achievements":[{"condition":5,"icon":"partageur","id":1,"tags":[],"title":"partageur","type_of":"send"}],"id":24,"username":"jesuissaloon"},{"achievements":[{"condition":1,"icon":"virginity_break","id":49,"tags":[],"title":"Virginity Break","type_of":"send"},{"condition":1,"icon":"un lingot","id":9,"tags":["golden","shower"],"title":"Goldfinger","type_of":"receive"}],"id":27,"username":"patrick"},{"achievements":[{"condition":1,"icon":"virginity_break","id":49,"tags":[],"title":"Virginity Break","type_of":"send"},{"condition":5,"icon":"partageur","id":1,"tags":[],"title":"partageur","type_of":"send"}],"id":12,"username":"korlan"}];
+      var responseData = [{"username":"jesuissaloon"},{"username":"patrick"},{"username":"korlan"}];
       callback(responseData);
   });
 
