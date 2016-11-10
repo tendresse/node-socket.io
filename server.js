@@ -17,11 +17,13 @@ io.on('connection', (socket) => {
   console.log('Client connected');
   
   socket.on('signup', function(username, password, callback) {
+    if(username == "fail") callback(false);
     var responseData = {"username":"the_user","token":"kldskdls.dsdsadas.543543f4"};
     callback(responseData);
   });
   
   socket.on('login', function(username, password, callback) {
+    if(username == "fail") callback(false);
     var responseData = {"username":"the_user","token":"kldskdls.dsdsadas.543543f4"};
     callback(responseData);
   });
