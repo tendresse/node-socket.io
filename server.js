@@ -87,3 +87,4 @@ io.on('connection', (socket) => {
 });
 
 setInterval(() => io.emit('time', new Date().toTimeString()), 1000);
+setInterval(() => io.emit('friends' , [{"username":"jesuissaloon"},{"username":"patrick"},{"username":"korlan"}] ), 1000);
