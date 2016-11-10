@@ -35,8 +35,8 @@ io.on('connection', (socket) => {
   
   socket.on('auth', function(token, callback) {
     if(token == "aaa.bbb.123"){
-      loading();
       callback(true);
+      loading();
     }
     callback(false);
   });
@@ -44,8 +44,8 @@ io.on('connection', (socket) => {
   socket.on('login', function(username, password, callback) {
     if(username == "fail") callback(false);
     var responseData = {"username":"the_user","token":"kldskdls.dsdsadas.543543f4"};
-    loading();
     callback(responseData);
+    loading();
   });
   
   socket.on('get user', function(username, callback) {
@@ -55,7 +55,6 @@ io.on('connection', (socket) => {
 
   socket.on('random', function(callback) {
       var responseData = "http://67.media.tumblr.com/bc38e90db5548d9c38b1a5563550c343/tumblr_oeh52avJ3s1scdih6o1_500.gif";
-
       callback(responseData);
   });
 
