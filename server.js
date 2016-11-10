@@ -18,8 +18,17 @@ io.on('connection', (socket) => {
   
   socket.on('signup', function(username, password, callback) {
     if(username == "fail") callback(false);
-    var responseData = {"username":"the_user","token":"kldskdls.dsdsadas.543543f4"};
+    if(username == "invalid"){
+      var responseData = {"username":"invalid","token":"aaa.bbb.321"};
+    }else{
+      var responseData = {"username":"the_user","token":"aaa.bbb.123"};
+    }
     callback(responseData);
+  });
+  
+  socket.on('auth', function(token, callback) {
+    if(token == "aaa.bbb.123") callback(true);
+    callback(false);
   });
   
   socket.on('login', function(username, password, callback) {
