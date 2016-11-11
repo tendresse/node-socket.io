@@ -84,3 +84,5 @@ io.on('connection', (socket) => {
 });
 
 setInterval(() => io.emit('time', new Date().toTimeString()), 1000);
+setInterval(() => io.emit('new tendresse', {"gif":"https://66.media.tumblr.com/2bb0a4c5e6c077a73bc917da00890cd4/tumblr_o9nk7rIwE41uqm3c9o1_500.gif","id":2625,"sender":"dloomad"}
+), 3000);
