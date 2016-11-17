@@ -23,7 +23,7 @@ io.on('connection', (socket) => {
   });
   
   socket.on('signup', function(username, password, callback) {
-    if(username == "fail") callback(false,{"login":"raté"});
+    if(username == "fail") callback({"success":true,"error":"raté"});
     if(username == "invalid"){
       var responseData = {"username":"invalid","token":"aaa.bbb.321"};
     }else{
